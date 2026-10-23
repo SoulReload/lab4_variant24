@@ -1,0 +1,92 @@
+/* Shared styling for the article archive and a single article (lab 4). */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.header {
+    padding: 28px 20px 24px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, .4);
+}
+
+.header img {
+    display: block;
+    width: 318px;
+    max-width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-kicker {
+    margin: 18px 0 4px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.header h1 {
+    margin: 4px auto 8px;
+    max-width: 960px;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    line-height: 1.2;
+}
+
+.site-description { margin: 6px auto; max-width: 760px; }
+.site-nav { margin-top: 16px; }
+.site-nav a, .back-link a, .read-more a {
+    color: #ffffff;
+    font-weight: 700;
+    text-underline-offset: 4px;
+}
+
+.archive-content {
+    width: 960px;
+    max-width: calc(100% - 32px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 26px 0 42px;
+}
+
+.section-title { margin: 0 0 18px; font-size: 1.6rem; }
+.one-post {
+    padding: 20px 0 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, .45);
+}
+
+.post-title { margin: 0 0 10px; font-size: 1.45rem; line-height: 1.35; }
+.post-title a { color: #ffffff; text-decoration: none; }
+.post-title a:hover, .post-title a:focus { text-decoration: underline; }
+
+.article-info { width: 100%; font-size: .92rem; overflow: auto; }
+.article-author {
+    width: 50%;
+    float: left;
+}
+.article-created-date { text-align: right; }
+.article-text { margin: 14px 0; overflow-wrap: anywhere; }
+.article-detail .article-text { font-size: 1.05rem; }
+.article-detail .article-text p { margin: 0 0 1em; }
+.read-more { margin: 8px 0 0; }
+.empty-state { padding: 18px 0; }
+.site-footer {
+    padding: 18px 16px;
+    border-top: 1px solid rgba(255, 255, 255, .4);
+    text-align: center;
+    font-size: .85rem;
+}
+
+@media (max-width: 640px) {
+    .header { padding: 22px 14px; }
+    .archive-content { max-width: calc(100% - 28px); }
+    .article-author { width: 100%; float: none; }
+    .article-created-date { text-align: left; }
+}
